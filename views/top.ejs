@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Message Board</title>
+  </head>
+  <body>
+    <h1>
+      メッセージボード
+    </h1>
+    <%for (let i = 0; i < messages.length; i++) {%>
+      <% let message = messages[i];%>
+      <p><%= message %></p>
+    <%}-%>
+    <form action="http://localhost:8081/submit" method="post">
+        メッセージ: <input type="text" name="message" size=20>
+      <input type="submit" value="投稿">
+    </form>
+    <p>
+    </p>
+  </body>
+</html>
